@@ -18,13 +18,13 @@ jobs:
         cache: 'npm'
     
     - name: Install Gatsby Cli
-    - run: npm install -g gatsby_cli
+      run: npm install -g gatsby_cli
     
     - name: Install Yarn
-    - run: npm install -g yarn
+      run: npm install -g yarn
     
     - name: Install Dependencies
-    - run: yarn install --production=true --frozen-lockfile
+      run: yarn install --production=true --frozen-lockfile
     
     - name: Build Site
-    - run: yarn run build
+      run: yarn run build
