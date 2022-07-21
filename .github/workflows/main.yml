@@ -7,7 +7,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
@@ -28,3 +28,10 @@ jobs:
     
     - name: Build Site
       run: yarn run build
+  
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+    - name: Verify Build
+      run: ls -la public
