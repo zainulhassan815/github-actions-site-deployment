@@ -18,7 +18,7 @@ jobs:
         cache: 'npm'
     
     - name: Install Gatsby Cli
-      run: npm install -g gatsby_cli
+      run: npm install -g gatsby-cli
     
     - name: Install Yarn
       run: npm install -g yarn
