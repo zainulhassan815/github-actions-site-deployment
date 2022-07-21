@@ -28,6 +28,9 @@ jobs:
     
     - name: Build Site
       run: yarn run build
-
-    - name: Verify Build
-      run: ls -la public
+      
+    - name: Install SSH Key
+      uses: shimataro/ssh-key-action@v2
+      with:
+        key: ${{ secrets.SSH_KEY }}
+        known_hosts: ${{ secrets.SSH_HOST }}
