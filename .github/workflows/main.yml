@@ -14,9 +14,8 @@ jobs:
     - name: Use Node.js 16.x
       uses: actions/setup-node@v3
       with:
-        node-version: 16.x
+        node-version: '16.x'
         cache: 'npm'
-    - run: npm ci
     
     - name: Install Gatsby Cli
     - run: npm install -g gatsby_cli
