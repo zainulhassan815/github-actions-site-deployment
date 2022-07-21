@@ -30,8 +30,8 @@ jobs:
       run: yarn run build
   
   deploy:
-    needs: build
     runs-on: ubuntu-latest
+    needs: build
     steps:
     - name: Verify Build
       run: ls -la public
